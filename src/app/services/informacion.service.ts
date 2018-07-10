@@ -29,7 +29,6 @@ export class InformacionService {
   public carga_sobre_nosotros() {
     this.httpC.get('https://paginweb-8c882.firebaseio.com/equipo.json')
       .subscribe( data => {
-        console.log(data);
         this.equipo = data;
         this.cargada_sobre_nosotros = true;
       });

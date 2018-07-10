@@ -16,9 +16,9 @@ export class ProductoComponent {
     route.params.subscribe( parametros => {
       /*console.log( parametros );
       console.log( parametros['id'] );*/
+      this.cod = parametros['id'];
       _ps.cargar_producto(parametros['id'])
         .subscribe( res => {
-          console.log(res);
           this.cod = parametros['id'];
           this.articulo = res;
         });

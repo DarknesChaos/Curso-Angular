@@ -19,7 +19,6 @@ export class ProductosService {
     this.cargando = true;
     this.httpC.get('https://paginweb-8c882.firebaseio.com/productos_idx.json')
       .subscribe( res => {
-        console.log(res);
         setTimeout( () => {
           this.cargando = false;
           this.productos = res;
